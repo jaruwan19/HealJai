@@ -31,7 +31,7 @@ class _SplashState extends State<Splash> {
       body: Container(
         alignment: Alignment.center,
         child: const Text(
-          "HEALJAI",
+          "HEALJAi",
           style: TextStyle(
             color: Color.fromRGBO(188, 170, 164, 1),
             fontSize: 64,

@@ -26,7 +26,7 @@ class _LoginState extends State<Login> {
           padding: const EdgeInsets.only(top: 30),
           alignment: Alignment.center,
           child: const Text(
-            "HEALJAI",
+            "HEALJAi",
             style: TextStyle(
               color: Color.fromRGBO(188, 170, 164, 1),
               fontSize: 64,
@@ -73,7 +73,7 @@ class _LoginState extends State<Login> {
                 children: const [
                   TextField(
                     style: TextStyle(color: Colors.white),
-                    obscureText: true,
+                    // obscureText: true,
                     decoration: InputDecoration(
                       hintText: "Password",
                       hintStyle: TextStyle(

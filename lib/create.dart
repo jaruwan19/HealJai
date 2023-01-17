@@ -48,7 +48,7 @@ class _CreateState extends State<Create> {
       const Align(
         alignment: Alignment.center,
         child: Text(
-          "HEALJAI",
+          "HEALJAi",
           style: TextStyle(
             color: Color.fromRGBO(188, 170, 164, 1),
             fontSize: 64,
