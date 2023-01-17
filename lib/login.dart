@@ -96,7 +96,7 @@ class _LoginState extends State<Login> {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: null,
-                      child: Text("Forgot Password?"),
+                      child: Text("Forgot Password?",),
                     ),
                   ),
                 ],
