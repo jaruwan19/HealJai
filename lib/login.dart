@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
               color: Color.fromRGBO(188, 170, 164, 1),
               fontSize: 64,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Cheri Liney',
+              fontFamily: 'CHERL',
             ),
           ),
         ),
@@ -102,13 +102,10 @@ class _LoginState extends State<Login> {
                 ],
               ),
               const SizedBox(height: 70),
-
               const LoginButton(),
-
               const SizedBox(height: 10),
-
               RichText(
-                textAlign: TextAlign.center,
+                  textAlign: TextAlign.center,
                   text: TextSpan(children: [
                     const TextSpan(
                       text: "Don't have an account ?",
@@ -126,12 +123,10 @@ class _LoginState extends State<Login> {
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                        Navigator.of(context).pushNamed("/create");
-                      },
+                          Navigator.of(context).pushNamed("/create");
+                        },
                     ),
-                  ]
-                )
-              ),
+                  ])),
             ],
           ),
         ),
@@ -139,4 +134,3 @@ class _LoginState extends State<Login> {
     );
   }
 }
-
