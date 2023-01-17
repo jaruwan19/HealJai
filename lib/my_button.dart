@@ -8,9 +8,8 @@ class LoginButton extends StatelessWidget {
     return Container(
       // padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        border: Border.all(width: 2, color: Colors.white),
-        borderRadius: BorderRadius.circular(10)
-      ),
+          border: Border.all(width: 2, color: Colors.white),
+          borderRadius: BorderRadius.circular(10)),
       child: const Center(
         child: Text(
           "Login",
@@ -20,7 +19,6 @@ class LoginButton extends StatelessWidget {
           ),
         ),
       ),
-      
     );
   }
 }
@@ -33,9 +31,8 @@ class CreateButton extends StatelessWidget {
     return Container(
       // padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        border: Border.all(width: 2, color: Colors.white),
-        borderRadius: BorderRadius.circular(10)
-      ),
+          border: Border.all(width: 2, color: Colors.white),
+          borderRadius: BorderRadius.circular(10)),
       child: const Center(
         child: Text(
           "Create",
@@ -45,7 +42,6 @@ class CreateButton extends StatelessWidget {
           ),
         ),
       ),
-      
     );
   }
 }

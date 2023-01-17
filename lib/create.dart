@@ -22,8 +22,7 @@ class _CreateState extends State<Create> {
   }
 
   Widget content() {
-    return Column(
-      children: [
+    return Column(children: [
       const SizedBox(height: 10),
       Row(
         children: [
@@ -31,10 +30,10 @@ class _CreateState extends State<Create> {
             onPressed: () {
               // Navigator.of(context).pushNamed("/Login");
               Navigator.push(
-                  context, MaterialPageRoute(builder: (BuildContext context){
+                context,
+                MaterialPageRoute(builder: (BuildContext context) {
                   return const Login();
-                  }
-                ),
+                }),
               );
             },
             icon: const Icon(
@@ -43,7 +42,6 @@ class _CreateState extends State<Create> {
               color: Colors.brown,
             ),
           ),
-          
         ],
       ),
       const SizedBox(height: 30),
@@ -97,18 +95,16 @@ class _CreateState extends State<Create> {
               children: [
                 DropdownButtonFormField(
                   decoration: const InputDecoration(
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white
-                        ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                          width: 2,
-                        ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                        width: 2,
                       ),
                     ),
+                  ),
                   items: _genderList
                       .map((e) => DropdownMenuItem(
                             value: e,
@@ -130,9 +126,7 @@ class _CreateState extends State<Create> {
                 DropdownButtonFormField(
                   decoration: const InputDecoration(
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white
-                      ),
+                      borderSide: BorderSide(color: Colors.white),
                     ),
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(
@@ -147,7 +141,6 @@ class _CreateState extends State<Create> {
                             child: Text(e),
                           ))
                       .toList(),
-                  
                   hint: const Text(
                     "ช่วงอายุ",
                     style: TextStyle(color: Colors.white),
@@ -184,7 +177,6 @@ class _CreateState extends State<Create> {
               ],
             ),
             const SizedBox(height: 70),
-            
             const CreateButton(),
           ],
         ),

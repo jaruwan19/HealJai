@@ -16,13 +16,15 @@ class _SplashState extends State<Splash> {
     super.initState();
   }
 
-  startTimer(){
+  startTimer() {
     var duration = const Duration(seconds: 4);
-    return Timer(duration,route);
+    return Timer(duration, route);
   }
-  route(){
+
+  route() {
     Navigator.of(context).pushReplacementNamed('/login');
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +33,7 @@ class _SplashState extends State<Splash> {
         child: const Text(
           "HEALJAi",
           style: TextStyle(
-            color: Color.fromRGBO(188, 170, 164,1),
+            color: Color.fromRGBO(188, 170, 164, 1),
             fontSize: 64,
             fontWeight: FontWeight.bold,
             fontFamily: 'Cheri Liney',
