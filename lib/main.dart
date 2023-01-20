@@ -3,6 +3,7 @@ import 'package:healjai/splash.dart';
 
 import 'create.dart';
 import 'login.dart';
+import 'home.dart';
 
 void main() {
   runApp(
@@ -13,6 +14,7 @@ void main() {
         "/": (context) => const Splash(),
         "/login": (context) => const Login(),
         "/create": (context) => const Create(),
+        "/home": (context) => const Home()
       },
     ),
   );
