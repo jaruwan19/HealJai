@@ -10,6 +10,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +20,7 @@ class _LoginState extends State<Login> {
 
   Widget content() {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           height: 200,
@@ -46,7 +48,6 @@ class _LoginState extends State<Login> {
               borderRadius: BorderRadius.circular(40)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const TextField(
                 style: TextStyle(color: Colors.white),
@@ -70,21 +71,33 @@ class _LoginState extends State<Login> {
               ),
               const SizedBox(height: 30),
               Column(
-                children: const [
+                children: [
                   TextField(
-                    style: TextStyle(color: Colors.white),
-                    // obscureText: true,
+                    obscureText: _obscureText,
+                    style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       hintText: "Password",
-                      hintStyle: TextStyle(
+                      hintStyle: const TextStyle(
                         color: Colors.white,
                       ),
-                      enabledBorder: UnderlineInputBorder(
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _obscureText = !_obscureText;
+                          });
+                        },
+                        icon: Icon(
+                            _obscureText
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                            color: Colors.white),
+                      ),
+                      enabledBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.white,
                         ),
                       ),
-                      focusedBorder: UnderlineInputBorder(
+                      focusedBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.white,
                           width: 2,
@@ -92,11 +105,17 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: null,
-                      child: Text("Forgot Password?",),
+                      child: Text(
+                        "Forgot Password?",
+                        style: TextStyle(
+                          color: Colors.brown,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                 ],

@@ -36,7 +36,7 @@ class _SplashState extends State<Splash> {
             color: Color.fromRGBO(188, 170, 164, 1),
             fontSize: 64,
             fontWeight: FontWeight.bold,
-            fontFamily: 'Cheri Liney',
+            fontFamily: 'CHERL',
           ),
         ),
       ),

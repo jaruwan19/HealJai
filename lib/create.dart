@@ -23,7 +23,7 @@ class _CreateState extends State<Create> {
 
   Widget content() {
     return Column(children: [
-      const SizedBox(height: 10),
+      const SizedBox(height: 60),
       Row(
         children: [
           IconButton(
@@ -53,13 +53,13 @@ class _CreateState extends State<Create> {
             color: Color.fromRGBO(188, 170, 164, 1),
             fontSize: 64,
             fontWeight: FontWeight.bold,
-            fontFamily: 'Cheri Liney',
+            fontFamily: 'CHERL',
           ),
         ),
       ),
-      const SizedBox(height: 75),
       Container(
-        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
+        margin: const EdgeInsets.only(top: 60),
+        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
         width: double.infinity,
         height: 500,
         decoration: BoxDecoration(
@@ -67,8 +67,6 @@ class _CreateState extends State<Create> {
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(40), topRight: Radius.circular(40))),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const TextField(
               style: TextStyle(color: Colors.white),
@@ -90,7 +88,7 @@ class _CreateState extends State<Create> {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 15),
             Column(
               children: [
                 DropdownButtonFormField(
@@ -120,7 +118,7 @@ class _CreateState extends State<Create> {
                 ),
               ],
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 15),
             Column(
               children: [
                 DropdownButtonFormField(
@@ -150,7 +148,7 @@ class _CreateState extends State<Create> {
                 ),
               ],
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 15),
             Column(
               children: const [
                 TextField(
@@ -176,7 +174,43 @@ class _CreateState extends State<Create> {
                 ),
               ],
             ),
-            const SizedBox(height: 70),
+            const SizedBox(height: 30),
+            Column(
+              children: const [
+                TextField(
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  decoration: InputDecoration(
+                    hintText: "อธิบายถึงตัวคุณสั้นๆ",
+                    hintStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                        width: 2,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 5),
+            const Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                "(ใช้ในกรณีที่คุณลืมรหัสผ่าน)",
+                style: TextStyle(color: Colors.brown) ,
+              ),
+            ),
+            const SizedBox(height: 40),
             const CreateButton(),
           ],
         ),
