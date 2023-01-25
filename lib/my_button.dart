@@ -8,17 +8,34 @@ class LoginButton extends StatelessWidget {
     return Container(
       // padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-          border: Border.all(width: 2, color: Colors.white),
+          // border: Border.all(width: 2, color: Colors.white),
           borderRadius: BorderRadius.circular(10)),
-      child: const Center(
-        child: Text(
-          "Login",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 32,
+      child: Center(
+          child: ElevatedButton(
+        onPressed: () {
+          Navigator.of(context).pushNamed("/home");
+        },
+        child: const Padding(
+          // padding: const EdgeInsets.all(15),
+          padding:
+              const EdgeInsets.only(left: 110, right: 110, top: 15, bottom: 15),
+          child: Text(
+            "Login",
+            style: TextStyle(fontSize: 20),
           ),
         ),
-      ),
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.brown),
+      )
+
+          // child: Text(
+          //   "Login",
+          //   style: TextStyle(
+          //     color: Colors.white,
+          //     fontSize: 32,
+          //   ),
+          // ),
+
+          ),
     );
   }
 }
