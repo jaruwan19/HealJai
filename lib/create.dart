@@ -22,199 +22,205 @@ class _CreateState extends State<Create> {
   }
 
   Widget content() {
-    return Column(children: [
-      const SizedBox(height: 60),
-      Row(
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            // Navigator.of(context).pushNamed("/Login");
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (BuildContext context) {
+                return const Login();
+              }),
+            );
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+            size: 24,
+            color: Colors.brown,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
+      body: Column(
         children: [
-          IconButton(
-            onPressed: () {
-              // Navigator.of(context).pushNamed("/Login");
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (BuildContext context) {
-                  return const Login();
-                }),
-              );
-            },
-            icon: const Icon(
-              Icons.arrow_back_ios_new_rounded,
-              size: 24,
-              color: Colors.brown,
+          const SizedBox(height: 30),
+          Container(
+            child: 
+            const Align(
+              alignment: Alignment.center,
+              child: Text(
+                "HEALJAi",
+                style: TextStyle(
+                  color: Color.fromRGBO(188, 170, 164, 1),
+                  fontSize: 64,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'CHERL',
+                ),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 70),
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
+            width: double.infinity,
+            height: 500,
+            decoration: BoxDecoration(
+                color: Colors.brown[200],
+                borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(40), topRight: Radius.circular(40))),
+            child: Column(
+              children: [
+                const TextField(
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    hintText: "ชื่อ",
+                    hintStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                        width: 2,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                Column(
+                  children: [
+                    DropdownButtonFormField(
+                      decoration: const InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 2,
+                          ),
+                        ),
+                      ),
+                      items: _genderList
+                          .map((e) => DropdownMenuItem(
+                                value: e,
+                                child: Text(e),
+                              ))
+                          .toList(),
+                      hint: const Text(
+                        "เพศ",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onChanged: (String? value) {},
+                      iconEnabledColor: Colors.white,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 15),
+                Column(
+                  children: [
+                    DropdownButtonFormField(
+                      decoration: const InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 2,
+                          ),
+                        ),
+                      ),
+                      items: _ageList
+                          .map((e) => DropdownMenuItem(
+                                value: e,
+                                child: Text(e),
+                              ))
+                          .toList(),
+                      hint: const Text(
+                        "ช่วงอายุ",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onChanged: (String? value) {},
+                      iconEnabledColor: Colors.white,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 15),
+                Column(
+                  children: const [
+                    TextField(
+                      style: TextStyle(color: Colors.white),
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        hintText: "รหัสผ่าน",
+                        hintStyle: TextStyle(
+                          color: Colors.white,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 2,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 30),
+                Column(
+                  children: const [
+                    TextField(
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      decoration: InputDecoration(
+                        hintText: "อธิบายถึงตัวคุณสั้นๆ",
+                        hintStyle: TextStyle(
+                          color: Colors.white,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 2,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 5),
+                const Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    "(ใช้ในกรณีที่คุณลืมรหัสผ่าน)",
+                    style: TextStyle(color: Colors.brown) ,
+                  ),
+                ),
+                const SizedBox(height: 40),
+                const CreateButton(),
+              ],
             ),
           ),
         ],
       ),
-      const SizedBox(height: 30),
-      const Align(
-        alignment: Alignment.center,
-        child: Text(
-          "HEALJAi",
-          style: TextStyle(
-            color: Color.fromRGBO(188, 170, 164, 1),
-            fontSize: 64,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'CHERL',
-          ),
-        ),
-      ),
-      Container(
-        margin: const EdgeInsets.only(top: 60),
-        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
-        width: double.infinity,
-        height: 500,
-        decoration: BoxDecoration(
-            color: Colors.brown[200],
-            borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(40), topRight: Radius.circular(40))),
-        child: Column(
-          children: [
-            const TextField(
-              style: TextStyle(color: Colors.white),
-              decoration: InputDecoration(
-                hintText: "ชื่อ",
-                hintStyle: TextStyle(
-                  color: Colors.white,
-                ),
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.white,
-                  ),
-                ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.white,
-                    width: 2,
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: 15),
-            Column(
-              children: [
-                DropdownButtonFormField(
-                  decoration: const InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                        width: 2,
-                      ),
-                    ),
-                  ),
-                  items: _genderList
-                      .map((e) => DropdownMenuItem(
-                            value: e,
-                            child: Text(e),
-                          ))
-                      .toList(),
-                  hint: const Text(
-                    "เพศ",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  onChanged: (String? value) {},
-                  iconEnabledColor: Colors.white,
-                ),
-              ],
-            ),
-            const SizedBox(height: 15),
-            Column(
-              children: [
-                DropdownButtonFormField(
-                  decoration: const InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                        width: 2,
-                      ),
-                    ),
-                  ),
-                  items: _ageList
-                      .map((e) => DropdownMenuItem(
-                            value: e,
-                            child: Text(e),
-                          ))
-                      .toList(),
-                  hint: const Text(
-                    "ช่วงอายุ",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  onChanged: (String? value) {},
-                  iconEnabledColor: Colors.white,
-                ),
-              ],
-            ),
-            const SizedBox(height: 15),
-            Column(
-              children: const [
-                TextField(
-                  style: TextStyle(color: Colors.white),
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "รหัสผ่าน",
-                    hintStyle: TextStyle(
-                      color: Colors.white,
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                        width: 2,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 30),
-            Column(
-              children: const [
-                TextField(
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  decoration: InputDecoration(
-                    hintText: "อธิบายถึงตัวคุณสั้นๆ",
-                    hintStyle: TextStyle(
-                      color: Colors.white,
-                    ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                        width: 2,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 5),
-            const Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                "(ใช้ในกรณีที่คุณลืมรหัสผ่าน)",
-                style: TextStyle(color: Colors.brown) ,
-              ),
-            ),
-            const SizedBox(height: 40),
-            const CreateButton(),
-          ],
-        ),
-      ),
-    ]);
+    );
   }
 }
