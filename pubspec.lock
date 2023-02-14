@@ -62,6 +62,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_bottom_navigation:
+    dependency: "direct main"
+    description:
+      name: flutter_bottom_navigation
+      sha256: c5474ff71df5f1f6517213dcafde1a953431105625d304193f448773ae0b567c
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   flutter_lints:
     dependency: "direct dev"
     description:
