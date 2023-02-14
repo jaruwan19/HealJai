@@ -13,7 +13,7 @@ class LoginButton extends StatelessWidget {
       child: Center(
           child: ElevatedButton(
         onPressed: () {
-          Navigator.of(context).pushNamed("/home");
+          Navigator.of(context).pushNamed("/index");
         },
         child: const Padding(
           // padding: const EdgeInsets.all(15),
