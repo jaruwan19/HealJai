@@ -38,6 +38,8 @@ dependencies:
   syncfusion_flutter_calendar: ^20.4.44
   simple_gradient_text: ^1.2.4
   flutter_bottom_navigation: ^1.0.0
+  clean_calendar: ^1.1.0
+  flutter_chat_ui: ^1.6.6
 
 dev_dependencies:
   flutter_test:
