@@ -43,7 +43,7 @@ class _CreateState extends State<Create> {
         backgroundColor: Colors.white,
         elevation: 0,
       ),
-      body: Column(
+      body: ListView(
         children: [
           const SizedBox(height: 30),
           Container(

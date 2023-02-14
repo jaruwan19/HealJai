@@ -37,10 +37,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   syncfusion_flutter_calendar: ^20.4.44
-  flutter_bottom_navigation: ^1.0.0
-  clean_calendar: ^1.1.0
-  flutter_socket_io: ^0.6.0
-  flutter_chat_ui: ^1.6.6
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +68,9 @@ flutter:
 
 
   #   - images/a_dot_ham.jpeg
+
+  assets :
+  - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

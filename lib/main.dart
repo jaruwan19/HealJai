@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healjai/index.dart';
 import 'package:healjai/splash.dart';
-
 import 'create.dart';
 import 'dashboard.dart';
 import 'login.dart';
@@ -19,11 +17,7 @@ void main() {
         "/": (context) => const Splash(),
         "/login": (context) => const Login(),
         "/create": (context) => const Create(),
-        "/home": (context) => const Home(),
-        "/chat": (context) => const ChatPage(),
-        "/index": (context) => const Index(),
-        "/calendar": (context) => const Calendar(),
-        "/dashboard": (context) => const Dashboard(),
+        "/home": (context) => const Home()
       },
     ),
   );
