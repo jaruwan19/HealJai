@@ -1,10 +1,13 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:healjai/home.dart';
+import 'package:healjai/index.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'login.dart';
 import 'mood.dart';
 
 class Moody extends StatelessWidget {
+  const Moody({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +18,7 @@ class Moody extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (BuildContext context) {
-                  return const Login();
+                  return const Index();
                 }),
               );
             },
@@ -73,7 +76,7 @@ class Moody extends StatelessWidget {
                   children: moods.map((mood) {
                     return GestureDetector(
                       onTap: () {
-                        Navigator.of(context).pushNamed("/login");
+                        Navigator.of(context).pushNamed("/index");
                       },
                       child: Container(
                         decoration: BoxDecoration(

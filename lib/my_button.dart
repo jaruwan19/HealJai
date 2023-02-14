@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:healjai/home.dart';
-import 'package:healjai/my_button.dart';
+import 'package:healjai/index.dart';
+import 'home.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-          // border: Border.all(width: 2, color: Colors.white),
-          borderRadius: BorderRadius.circular(10)),
-      child: Center(
-          child: ElevatedButton(
-        onPressed: () {
-          Navigator.of(context).pushNamed("/home");
-        },
-        child: const Padding(
-          // padding: const EdgeInsets.all(15),
-          padding:
-              const EdgeInsets.only(left: 110, right: 110, top: 15, bottom: 15),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Index()),
+        );
+      },
+      child: Container(
+        // padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            border: Border.all(width: 2, color: Colors.white),
+            borderRadius: BorderRadius.circular(10)),
+        child: const Center(
           child: Text(
             "Login",
             style: TextStyle(
@@ -30,11 +29,9 @@ class LoginButton extends StatelessWidget {
           ),
         ),
       ),
-      ),
     );
   }
 }
-
 
 class CreateButton extends StatelessWidget {
   const CreateButton({super.key});

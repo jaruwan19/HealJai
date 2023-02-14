@@ -4,6 +4,7 @@ import 'package:flutter_bottom_navigation/flutter_bottom_navigation.dart';
 import 'package:healjai/home.dart';
 
 import 'package:healjai/chat.dart';
+import 'package:healjai/moody.dart';
 
 class Index extends StatefulWidget {
   const Index({super.key});
@@ -19,10 +20,7 @@ class _IndexState extends State<Index> {
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
     ChatPage(),
-    Text(
-      'Index 2: Moody',
-      style: optionStyle,
-    ),
+    Moody(),
     Text(
       'Index 3: Profile',
       style: optionStyle,

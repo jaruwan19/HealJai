@@ -182,16 +182,7 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.all(20),
-                    child: TextField(
-                      // controller:
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Enter Text Here',
-                      ),
-                    ),
-                  ),
+                 
                 ],
               )
             ]),
