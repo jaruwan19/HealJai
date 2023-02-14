@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bottom_navigation/flutter_bottom_navigation.dart';
 import 'package:healjai/home.dart';
-
+import 'package:healjai/profile.dart';
 import 'package:healjai/chat.dart';
 import 'package:healjai/moody.dart';
 
@@ -21,10 +21,7 @@ class _IndexState extends State<Index> {
     Home(),
     ChatPage(),
     Moody(),
-    Text(
-      'Index 3: Profile',
-      style: optionStyle,
-    ),
+    Profile(),
   ];
 
   void _onItemTapped(int index) {

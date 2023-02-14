@@ -40,6 +40,12 @@ dependencies:
   flutter_bottom_navigation: ^1.0.0
   clean_calendar: ^1.1.0
   flutter_chat_ui: ^1.6.6
+  bs_flutter_modal: ^1.0.6
+  bs_flutter_buttons: ^1.2.8
+  d_chart: ^2.2.5
+  group_radio_button: ^1.3.0
+  
+
 
 dev_dependencies:
   flutter_test:

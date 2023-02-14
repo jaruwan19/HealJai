@@ -8,6 +8,9 @@ import 'home.dart';
 import 'chat.dart';
 import 'index.dart';
 import 'calendar.dart';
+import 'forgotPassword/forgotPassword.dart';
+import 'barchartPage.dart';
+import 'donutChart.dart';
 
 void main() {
   runApp(
@@ -23,6 +26,9 @@ void main() {
         "/chat": (context) => const ChatPage(),
         "/index": (context) => const Index(),
         "/canlendar": (context) => const Calendar(),
+        "/fogotPass": (context) => const ForgotPassword(),
+        "/bar_chart": (context) => BarchartPage(),
+        "/donut_chart": (context) => DonutChartPage(),
       },
     ),
   );

@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'my_button.dart';
+import 'forgotPassword/forgotPassword.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -105,11 +106,17 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
-                      onPressed: null,
-                      child: Text(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ForgotPassword()),
+                        );
+                      },
+                      child: const Text(
                         "Forgot Password?",
                         style: TextStyle(
                           color: Colors.brown,

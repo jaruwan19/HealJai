@@ -47,8 +47,7 @@ class _CreateState extends State<Create> {
         children: [
           const SizedBox(height: 30),
           Container(
-            child: 
-            const Align(
+            child: const Align(
               alignment: Alignment.center,
               child: Text(
                 "HEALJAi",
@@ -69,7 +68,8 @@ class _CreateState extends State<Create> {
             decoration: BoxDecoration(
                 color: Colors.brown[200],
                 borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(40), topRight: Radius.circular(40))),
+                    topLeft: Radius.circular(40),
+                    topRight: Radius.circular(40))),
             child: Column(
               children: [
                 const TextField(
@@ -211,7 +211,7 @@ class _CreateState extends State<Create> {
                   alignment: Alignment.centerRight,
                   child: Text(
                     "(ใช้ในกรณีที่คุณลืมรหัสผ่าน)",
-                    style: TextStyle(color: Colors.brown) ,
+                    style: TextStyle(color: Colors.brown),
                   ),
                 ),
                 const SizedBox(height: 40),
