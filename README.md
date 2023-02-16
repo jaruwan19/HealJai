@@ -16,4 +16,4 @@ See [Product manager tools, Click to download](https://www.mediafire.com/file/ko
 <!-- - https://www.mediafire.com/file/koo2mwojci1rbev/ProductBacklogandSprintManagementTool_%25281%2529.xls/file -->
 
 and this trello app for displayed software process
-- https://trello.com/b/fHgeFKJo/healjai
+- [Trello Project resources, Click to visite](https://trello.com/b/fHgeFKJo/healjai).
