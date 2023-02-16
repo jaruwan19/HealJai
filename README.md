@@ -1,6 +1,6 @@
 # HealJai
 The HealJai is frontend application for lern flutter in "Mobile Application Deverlopment" class
-The HealJai is mixing thai word with english word ,"heal" is englinsh word and "jai" is thai word. "jai" meaning "mind" so "HealJai" is "heal mind"ใ
+The HealJai is mixing thai word with english word ,"heal" is englinsh word and "jai" is thai word. "jai" meaning "mind" so "HealJai" is "heal mind"
 
 ## Getting Started
 - install flutter in your device . This link how to insall https://docs.flutter.dev/get-started/install 
@@ -11,4 +11,7 @@ The HealJai is mixing thai word with english word ,"heal" is englinsh word and "
 ## Software process
 The software process for this project is Agile Scrum. We are lern Flutter simultaneously with Agile Scrum.
 this file displayed process for this project 
-https://www.mediafire.com/file/koo2mwojci1rbev/ProductBacklogandSprintManagementTool_%25281%2529.xls/file
+- https://www.mediafire.com/file/koo2mwojci1rbev/ProductBacklogandSprintManagementTool_%25281%2529.xls/file
+
+and this trello app for displayed software process
+- https://trello.com/b/fHgeFKJo/healjai
