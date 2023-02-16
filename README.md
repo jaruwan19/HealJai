@@ -1,4 +1,4 @@
-# healjai
+# HealJai
 
 A new Flutter project.
 
