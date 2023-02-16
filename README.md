@@ -11,8 +11,9 @@ The HealJai is mixing thai word with english word ,"heal" is englinsh word and "
 ## Software process
 The software process for this project is Agile Scrum. We are lern Flutter simultaneously with Agile Scrum.
 this file displayed process for this project 
-See [Product manager tools](https://www.mediafire.com/file/koo2mwojci1rbev/ProductBacklogandSprintManagementTool_%25281%2529.xls/file).
-- https://www.mediafire.com/file/koo2mwojci1rbev/ProductBacklogandSprintManagementTool_%25281%2529.xls/file
+
+See [Product manager tools, Click to download](https://www.mediafire.com/file/koo2mwojci1rbev/ProductBacklogandSprintManagementTool_%25281%2529.xls/file).
+<!-- - https://www.mediafire.com/file/koo2mwojci1rbev/ProductBacklogandSprintManagementTool_%25281%2529.xls/file -->
 
 and this trello app for displayed software process
 - https://trello.com/b/fHgeFKJo/healjai
